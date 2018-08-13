@@ -25,7 +25,7 @@ export class ProductService{
     return this.httpClient.get<Product[]>('/data/products.json');
   }
 
-  getById(productId: number): Observable<Product>{
+  getById(productId: number): Observable<Product> {
     return this.getAll().pipe(
       map(res => res.find( p => p.id === productId))
     );

@@ -1,5 +1,5 @@
 <mat-toolbar class="toolbar">
-  <button class="toolbar__icon-button" mat-icon-button>
+  <button  (click)="remove()" class="toolbar__icon-button" mat-icon-button>
     <mat-icon>menu</mat-icon>
   </button>
   <div class="toolbar__logo-title-group"
@@ -12,10 +12,10 @@
          alt="NgAuction Logo">
   </a>
   <a class="toolbar__title"
-     routerLink="/">NgAuction</a>
+     routerLink="/">{{title}}</a>
   </div>
   <div fxFlex></div>
-  <button mat-icon-button class="toolbar__icon-button toolbar__shopping-cart-button">
+  <button (click)="server()" mat-icon-button class="toolbar__icon-button toolbar__shopping-cart-button">
     <mat-icon>shopping_cart</mat-icon>
   </button>
 </mat-toolbar>
